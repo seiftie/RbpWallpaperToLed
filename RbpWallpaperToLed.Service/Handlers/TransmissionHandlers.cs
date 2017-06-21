@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using System.Threading;
+using RbpWallpaperToLed.Core;
+using System.Drawing;
 
 namespace RbpWallpaperToLed.Service.Handlers
 {
@@ -12,11 +15,8 @@ namespace RbpWallpaperToLed.Service.Handlers
     {
         public static bool Send()
         {
-            Socket sListener;
-            SocketPermission permission = new SocketPermission(NetworkAccess.Accept, TransportType.Tcp, "", SocketPermission.AllPorts);
-            IPHostEntry ipHost = Dns.GetHostEntry("");
-            IPAddress ip = ipHost.AddressList[0];
-            
+            Sockets.ServerInit(IPAddress.Any);
+
             return true;
         }
     }

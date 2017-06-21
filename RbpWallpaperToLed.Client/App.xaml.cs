@@ -28,7 +28,7 @@ namespace RbpWallpaperToLed.Client
         /// </summary>
         public App()
         {
-            this.InitializeComponent();
+            this.InitializeComponent(); // Init all elements in the App.xaml
             this.Suspending += OnSuspending;
         }
 
@@ -84,7 +84,7 @@ namespace RbpWallpaperToLed.Client
         /// </summary>
         /// <param name="sender">The Frame which failed navigation</param>
         /// <param name="e">Details about the navigation failure</param>
-        void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
+        private void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }

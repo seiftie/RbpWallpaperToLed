@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RbpWallpaperToLed.Service",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RbpWallpaperToLed.Client", "RbpWallpaperToLed.Client\RbpWallpaperToLed.Client.csproj", "{67A28FF0-E14D-4162-942F-9B0694E80086}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RbpWallpaperToLed.Core", "RbpWallpaperToLed.Core\RbpWallpaperToLed.Core.csproj", "{A5AEDA28-0A49-45C5-B85B-61003119FC61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,22 @@ Global
 		{67A28FF0-E14D-4162-942F-9B0694E80086}.Release|x86.ActiveCfg = Release|x86
 		{67A28FF0-E14D-4162-942F-9B0694E80086}.Release|x86.Build.0 = Release|x86
 		{67A28FF0-E14D-4162-942F-9B0694E80086}.Release|x86.Deploy.0 = Release|x86
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Debug|ARM.Build.0 = Debug|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Debug|x64.Build.0 = Debug|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Debug|x86.Build.0 = Debug|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Release|ARM.ActiveCfg = Release|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Release|ARM.Build.0 = Release|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Release|x64.ActiveCfg = Release|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Release|x64.Build.0 = Release|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Release|x86.ActiveCfg = Release|Any CPU
+		{A5AEDA28-0A49-45C5-B85B-61003119FC61}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

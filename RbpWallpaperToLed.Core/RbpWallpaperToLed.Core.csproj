@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{910F3CCF-D37C-45CD-AC5D-2DDE1039B827}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{A5AEDA28-0A49-45C5-B85B-61003119FC61}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RbpWallpaperToLed.Service</RootNamespace>
-    <AssemblyName>RbpWallpaperToLed.Service</AssemblyName>
+    <RootNamespace>RbpWallpaperToLed.Core</RootNamespace>
+    <AssemblyName>RbpWallpaperToLed.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,30 +30,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Handlers\ImageHandlers.cs" />
-    <Compile Include="Handlers\TransmissionHandlers.cs" />
-    <Compile Include="Handlers\WindowsHandlers.cs" />
-    <Compile Include="WallpaperToLedService.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="WallpaperToLedServiceInstaller.cs">
-      <SubType>Component</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RbpWallpaperToLed.Core\RbpWallpaperToLed.Core.csproj">
-      <Project>{a5aeda28-0a49-45c5-b85b-61003119fc61}</Project>
-      <Name>RbpWallpaperToLed.Core</Name>
-    </ProjectReference>
+    <Compile Include="Convert.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sockets.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
