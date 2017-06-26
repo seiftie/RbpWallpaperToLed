@@ -6,6 +6,7 @@ using System.Linq;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+using System.Management;
 
 namespace RbpWallpaperToLed.Service.Handlers
 {
@@ -13,7 +14,22 @@ namespace RbpWallpaperToLed.Service.Handlers
     {
         public static void ScanWallpaper()
         {
+            // Option 1
             SystemEvents.UserPreferenceChanged += SystemEvents_UserPreferenceChanged;
+
+            // Option 2
+            WqlEventQuery query = new WqlEventQuery(@"
+                SELECT * FROM RegistryValueChangedEvent WHERE 
+                Hive = 'HKEY_CURRENT_USER'
+                AND KeyPath = 'Control Panel\Desktop\' AND ValueName='WallPaper'");
+            ManagementEventWatcher watcher = new ManagementEventWatcher("");
+            watcher.EventArrived += new EventArrivedEventHandler(HandleEvent);
+            watcher.Start();
+        }
+
+        private static void HandleEvent(object sender, EventArrivedEventArgs e)
+        {
+            // Do something with option 2
         }
 
         private static void SystemEvents_UserPreferenceChanged(object sender, UserPreferenceChangedEventArgs e)
